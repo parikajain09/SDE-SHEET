@@ -1,0 +1,16 @@
+class Solution {
+    public int totalMoney(int n) {
+        int res=0;
+        int weeks=n/7;
+        int f_term=28;
+        int l_term=28+(weeks-1)*7;
+        res=weeks*(f_term+l_term)/2;
+        int money=weeks+1;
+        for(int i=1;i<=n%7;i++){
+            res+=money;
+            money++;
+        }
+
+       return res;
+    }
+}
